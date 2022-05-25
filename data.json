@@ -1,0 +1,66 @@
+[
+  {
+    "imgSrc": "./images/ash.jpeg",
+    "name": "ash"
+  },
+  {
+    "imgSrc": "./images/bebetter.jpeg",
+    "name": "bebetter"
+  },
+  {
+    "imgSrc": "./images/believe.jpeg",
+    "name": "believe"
+  },
+  {
+    "imgSrc": "./images/cr7.jpeg",
+    "name": "cr7"
+  },
+  {
+    "imgSrc": "./images/dj.jpeg",
+    "name": "dj"
+  },
+  {
+    "imgSrc": "./images/dj2.jpeg",
+    "name": "dj2"
+  },
+  {
+    "imgSrc": "./images/enchiladas.jpeg",
+    "name": "enchiladas"
+  },
+  {
+    "imgSrc": "./images/great.png",
+    "name": "great"
+  },
+  {
+    "imgSrc": "./images/ican.png",
+    "name": "ican"
+  },
+  {
+    "imgSrc": "./images/js.png",
+    "name": "js"
+  },
+  {
+    "imgSrc": "./images/map.jpeg",
+    "name": "map"
+  },
+  {
+    "imgSrc": "./images/mexico.jpeg",
+    "name": "mexico"
+  },
+  {
+    "imgSrc": "./images/pencil.jpeg",
+    "name": "pencil"
+  },
+  {
+    "imgSrc": "./images/stayfocused.jpeg",
+    "name": "stayfocused"
+  },
+  {
+    "imgSrc": "./images/tacos.jpeg",
+    "name": "tacos"
+  },
+  {
+    "imgSrc": "./images/thunder.png",
+    "name": "thunder"
+  }
+]
