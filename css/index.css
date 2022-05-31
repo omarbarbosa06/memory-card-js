@@ -47,3 +47,18 @@ body {
 .disabled {
   pointer-events: none;
 }
+
+.minus-1 {
+  color: red;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.lives {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.player-lives {
+  font-size: 30px;
+}

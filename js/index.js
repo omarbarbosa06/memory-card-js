@@ -3,7 +3,8 @@ import data from '../data.json' assert { type: 'json' }
 //Constants
 
 const cardArea = document.querySelector('.cardArea')
-const livesCounter = document.querySelector('span')
+const livesCounter = document.querySelector('.player-lives')
+let minus1 = document.querySelector('.minus-1')
 
 let lives = 3
 
@@ -66,11 +67,13 @@ const checkCards = (e) => {
         card.style.pointerEvents = 'none'
       })
     } else {
-      console.log('not mtch')
+      minus1.style.opacity = '1'
+
       flippedCards.forEach((card) => {
         card.classList.remove('flipped')
         setTimeout(() => {
           card.classList.remove('toggleCard')
+          minus1.style.opacity = '0'
         }, 1000)
       })
       loseLife()
@@ -87,7 +90,9 @@ const restart = () => {
   let cards = document.querySelectorAll('.card')
   cardArea.style.pointerEvents = 'none'
   data.forEach((item, index) => {
-    cards[index].classList.remove('toggleCard')
+    setTimeout(() => {
+      cards[index].classList.remove('toggleCard')
+    }, 500)
     setTimeout(() => {
       cards[index].style.pointerEvents = 'all'
       back[index].src = item.imgSrc
