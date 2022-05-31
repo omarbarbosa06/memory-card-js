@@ -28,11 +28,22 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
+  pointer-events: none;
+
+  /* we just want the card clickable */
 }
 .back {
-  background-color: red;
   backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
+.front {
+  background-color: red;
+}
+
 .toggleCard {
   transform: rotateY(180deg);
+}
+
+.disabled {
+  pointer-events: none;
 }
