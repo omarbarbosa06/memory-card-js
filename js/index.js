@@ -1,4 +1,69 @@
-import data from '../data.json' assert { type: 'json' }
+let data = [
+  {
+    imgSrc: './images/ash.jpeg',
+    name: 'ash',
+  },
+  {
+    imgSrc: './images/bebetter.jpeg',
+    name: 'bebetter',
+  },
+  {
+    imgSrc: './images/believe.jpeg',
+    name: 'believe',
+  },
+  {
+    imgSrc: './images/cr7.jpeg',
+    name: 'cr7',
+  },
+  {
+    imgSrc: './images/dj.jpeg',
+    name: 'dj',
+  },
+  {
+    imgSrc: './images/dj2.jpeg',
+    name: 'dj2',
+  },
+  {
+    imgSrc: './images/enchiladas.jpeg',
+    name: 'enchiladas',
+  },
+  {
+    imgSrc: './images/great.png',
+    name: 'great',
+  },
+  {
+    imgSrc: './images/ash.jpeg',
+    name: 'ash',
+  },
+  {
+    imgSrc: './images/bebetter.jpeg',
+    name: 'bebetter',
+  },
+  {
+    imgSrc: './images/believe.jpeg',
+    name: 'believe',
+  },
+  {
+    imgSrc: './images/cr7.jpeg',
+    name: 'cr7',
+  },
+  {
+    imgSrc: './images/dj.jpeg',
+    name: 'dj',
+  },
+  {
+    imgSrc: './images/dj2.jpeg',
+    name: 'dj2',
+  },
+  {
+    imgSrc: './images/enchiladas.jpeg',
+    name: 'enchiladas',
+  },
+  {
+    imgSrc: './images/great.png',
+    name: 'great',
+  },
+]
 
 //Constants
 
