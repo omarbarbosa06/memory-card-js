@@ -3,7 +3,8 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   font-family: sans-serif;
-  border: 1px solid red;
+  min-width: 200px;
+  background: rgb(82, 196, 204);
 }
 
 .header {
@@ -18,7 +19,6 @@ body {
   gap: 1rem;
   perspective: 800px;
   padding: 15px;
-  border: 1px solid red;
 }
 .card {
   position: relative;
@@ -37,12 +37,28 @@ body {
 
   /* we just want the card clickable */
 }
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.front {
+  display: grid;
+  place-content: center;
+  align-items: center;
+}
 .back {
   backface-visibility: hidden;
   transform: rotateY(180deg);
+  border: 2px solid black;
 }
 .front {
   background-color: red;
+  border: 2px solid black;
+}
+.front > * {
+  color: black;
+  font-size: 20px;
 }
 
 .toggleCard {
@@ -62,6 +78,7 @@ body {
 .info {
   display: flex;
   justify-content: space-between;
+  padding-inline: 15px;
 }
 .lives-content {
   display: flex;

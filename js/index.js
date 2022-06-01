@@ -5,6 +5,7 @@ import data from '../data.json' assert { type: 'json' }
 const cardArea = document.querySelector('.cardArea')
 const livesCounter = document.querySelector('.player-lives')
 const playerAttempts = document.querySelector('.player-attempts')
+const checkbox = document.querySelector('.checkbox')
 let minus1 = document.querySelector('.minus-1')
 
 let lives = 3
@@ -12,6 +13,19 @@ let attempts = 0
 
 livesCounter.textContent = lives
 playerAttempts.textContent = attempts
+
+checkbox.addEventListener('change', (event) => {
+  const front = document.querySelectorAll('.front-content')
+  if (event.target.checked) {
+    front.forEach((item, index) => {
+      item.textContent = index + 1
+    })
+  } else {
+    front.forEach((item, index) => {
+      item.textContent = 'OB'
+    })
+  }
+})
 
 //Random data order
 const randomizeData = () => {
@@ -25,15 +39,19 @@ const loseLife = () => {
 const cardGenerator = () => {
   const randomizeCardData = randomizeData()
   //Generate HTML
-  randomizeCardData.forEach((item) => {
+  randomizeCardData.forEach((item, index) => {
     const card = document.createElement('div')
     const backCard = document.createElement('img')
     const frontCard = document.createElement('div')
+    let frontCardContent = document.createElement('span')
 
     //Adding classes to each card
     card.classList = 'card'
     frontCard.classList = 'front'
+    frontCardContent.classList = 'front-content'
     backCard.classList = 'back'
+
+    frontCardContent.textContent = 'OB'
 
     //Attach info to card
     backCard.src = item.imgSrc
@@ -43,6 +61,7 @@ const cardGenerator = () => {
     cardArea.appendChild(card)
     card.appendChild(frontCard)
     card.appendChild(backCard)
+    frontCard.appendChild(frontCardContent)
 
     addCardEventListener(card)
   })
