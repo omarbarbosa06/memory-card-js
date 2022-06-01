@@ -2,18 +2,23 @@ body {
   margin: 0;
   box-sizing: border-box;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-family: sans-serif;
+  border: 1px solid red;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
 }
 
 .cardArea {
   display: grid;
-  grid-template-columns: repeat(4, 8rem);
-  grid-template-rows: repeat(4, 8rem);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 120px);
   gap: 1rem;
   perspective: 800px;
+  padding: 15px;
+  border: 1px solid red;
 }
 .card {
   position: relative;
@@ -54,11 +59,46 @@ body {
   opacity: 0;
   transition: opacity 1s;
 }
-.lives {
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.lives-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.attempts {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 .player-lives {
   font-size: 30px;
+}
+.player-attempts {
+  font-size: 30px;
+}
+
+.wrapper {
+  max-width: 730px;
+  margin: auto;
+}
+h1 {
+  margin: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .cardArea {
+    grid-template-rows: repeat(4, 80px);
+  }
+  h2 {
+    font-size: 15px;
+  }
+  .player-lives {
+    font-size: 20px;
+  }
+  .player-attempts {
+    font-size: 20px;
+  }
 }

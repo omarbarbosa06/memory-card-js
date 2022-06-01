@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <div class="lives">
-      <h1>Lives:</h1>
-      <span class="player-lives"></span>
-      <span class="minus-1">-1</span>
+    <header class="header">
+      <h1>Memory Game!</h1>
+    </header>
+    <div class="wrapper">
+      <div class="info">
+        <div class="lives-content">
+          <h2>Lives:</h2>
+          <span class="player-lives"></span>
+          <span class="minus-1">-1</span>
+        </div>
+        <div class="attempts">
+          <h2>Attempts:</h2>
+          <span class="player-attempts"></span>
+        </div>
+      </div>
+      <main>
+        <div class="cardArea"></div>
+      </main>
     </div>
-    <main>
-      <div class="cardArea"></div>
-    </main>
 
     <script src="./js/index.js" type="module"></script>
   </body>

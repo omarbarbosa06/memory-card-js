@@ -4,11 +4,14 @@ import data from '../data.json' assert { type: 'json' }
 
 const cardArea = document.querySelector('.cardArea')
 const livesCounter = document.querySelector('.player-lives')
+const playerAttempts = document.querySelector('.player-attempts')
 let minus1 = document.querySelector('.minus-1')
 
 let lives = 3
+let attempts = 0
 
 livesCounter.textContent = lives
+playerAttempts.textContent = attempts
 
 //Random data order
 const randomizeData = () => {
@@ -79,6 +82,8 @@ const checkCards = (e) => {
       loseLife()
       if (lives === 0) {
         restart()
+        attempts++
+        playerAttempts.textContent = attempts
       }
     }
   }
@@ -91,9 +96,11 @@ const restart = () => {
   cardArea.style.pointerEvents = 'none'
   data.forEach((item, index) => {
     setTimeout(() => {
+      console.log('2')
       cards[index].classList.remove('toggleCard')
     }, 500)
     setTimeout(() => {
+      console.log('3')
       cards[index].style.pointerEvents = 'all'
       back[index].src = item.imgSrc
       cards[index].setAttribute('name', item.name)
